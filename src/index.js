@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+const YT_API_KEY = process.env.TESTDBUSER;
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const App = () => {
+    return <div>Hey there from index</div>;
+};
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+console.log("the key is: " + YT_API_KEY);
+
+ReactDOM.render(<App />, document.getElementById('container'));
