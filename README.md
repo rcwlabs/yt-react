@@ -1,1 +1,1 @@
-# YouTube play app with React
+# YouTube player app with React
