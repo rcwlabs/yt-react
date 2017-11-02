@@ -14,7 +14,8 @@ class App extends Component {
         super(props);
 
         this.state = {
-            videos: []
+            videos: [],
+            selectedVideo: null
         };
 
         ytsearch({ key: YT_API_KEY, term: 'drums' }, (videos) => {
@@ -26,7 +27,7 @@ class App extends Component {
         return (
             <div>
                 <Searchbar />
-                <VideoDetail video={this.state.videos[0]} />
+                <VideoDetail video={this.state.selectedVideo} />
                 <VideoList videos={this.state.videos}/>
             </div>
         );
